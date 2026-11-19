@@ -1,0 +1,46 @@
+# ── 运行时产物（绝不提交） ─────────────────────────
+# 登录态 Cookie、去重状态、待发布队列 —— 含账号隐私，泄露=被盗号
+state/
+work/
+outbox/
+inbox/*
+!inbox/.gitkeep
+logs/
+
+# ── 本地环境与缓存 ───────────────────────────────
+.venv/
+.asrenv/
+.hf_cache/
+__pycache__/
+*.py[cod]
+*.egg-info/
+pip-install-*/
+pip-build-tracker-*/
+pip-ephem-wheel-cache-*/
+
+# ── 密钥 ────────────────────────────────────────
+.env
+.env.local
+
+# ── 打包产物 ────────────────────────────────────
+dist/
+build/
+*.spec
+*.lnk
+
+# ── 第三方版权资源（不随仓库分发，用 import_jianying_assets.py 从本机剪映导入） ──
+assets/bgm/**/*.mp3
+assets/bgm/**/*.wav
+assets/bgm/**/*.m4a
+assets/bgm/**/*.flac
+assets/fonts/*.ttf
+assets/fonts/*.otf
+assets/fonts/*.ttc
+
+# ── 系统垃圾 ────────────────────────────────────
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ── 一次性诊断脚本（本地排查用，不入库） ─────────────
+_debug/

@@ -1,0 +1,15 @@
+# 源码统一 LF；Windows 批处理必须 CRLF（否则 cmd 逐行执行会报错）
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# 二进制
+*.mp4 binary
+*.mp3 binary
+*.jpg binary
+*.png binary
+*.wav binary
+*.ttf binary
+*.otf binary
+*.exe binary

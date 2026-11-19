@@ -1,0 +1,80 @@
+{
+  "paths": {
+    "inbox": "inbox",
+    "outbox": "outbox",
+    "work": "work",
+    "state": "state",
+    "logs": "logs",
+    "bgm": "assets/bgm",
+    "cover_font": ""
+  },
+  "asr": {
+    "backend": "auto",
+    "model": "small",
+    "language": "zh",
+    "device": "auto",
+    "compute_type": "int8"
+  },
+  "brain": {
+    "backend": "auto",
+    "llm": {
+      "provider": "openai",
+      "base_url": "",
+      "model": "gpt-4o-mini",
+      "api_key_env": "LLM_API_KEY"
+    },
+    "target": {
+      "duration_min": 30,
+      "duration_max": 90,
+      "aspect": "9:16",
+      "hook_seconds": 3
+    },
+    "style": {
+      "remove_fillers": true,
+      "compress_silence": true,
+      "silence_max": 0.3,
+      "keep_complete_sentence": true
+    }
+  },
+  "caption": {
+    "enabled": true,
+    "burn_in": true,
+    "font_size": 42,
+    "font_color": "&H00FFFFFF",
+    "outline": 2,
+    "max_chars_per_line": 16
+  },
+  "cover": {
+    "enabled": true,
+    "timestamp": "auto",
+    "title_from": "llm"
+  },
+  "audio": {
+    "keep_original": true,
+    "bgm_volume": 0.12
+  },
+  "publish": {
+    "auto_publish": false,
+    "platforms": {
+      "douyin": false,
+      "xiaohongshu": false,
+      "shipinhao": false,
+      "kuaishou": false
+    },
+    "browser": {
+      "headless": false,
+      "profile_dir": "state/browser_profiles",
+      "slow_mo_ms": 80
+    }
+  },
+  "schedule": {
+    "watch_inbox": true,
+    "poll_seconds": 20,
+    "daily_publish_time": "20:00"
+  },
+  "copywriting": {
+    "title_template": "{title}",
+    "caption_template": "{caption}\n{hashtags}",
+    "default_hashtags": ["#短视频", "#日常分享"]
+  }
+}
